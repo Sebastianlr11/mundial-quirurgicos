@@ -2,39 +2,38 @@
 // src/components/HeroSection.astro
 ---
 
-<section class="py-24 bg-blue-200 relative overflow-hidden">
+<section class="py-24 bg-gradient-to-br from-blue-400 to-blue-700 relative overflow-hidden rounded-2xl">
   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-    <!-- Texto y botones -->
     <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <h1 class="text-6xl md:text-6xl font-bold text-white mb-6 md:text-center">
         Prendas Hospitalarias de Alta Calidad
       </h1>
-      <p class="text-gray-700 text-lg mb-8">
-        Fabricamos y distribuimos batas quirúrgicas, ropa de paciente y uniformes médicos con los más altos estándares de calidad y bioseguridad.
+      <p class="text-gray-100 text-xl mb-8 md:text-2xl md:text-center">
+        Fabricamos y distribuimos batas quirúrgicas, 
+        ropa de paciente y uniformes médicos con los 
+        más altos estándares de calidad y bioseguridad.
       </p>
-      <div class="space-x-4">
-        <a href="#" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md transition-colors duration-300">
+      <div class="flex justify-center space-x-4"> <a href="#" class="inline-block bg-transparent hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-2xl transition-colors duration-300 shadow-md hover:shadow-2xl border border-white hover:translate-0.5 ">
           Ver Catálogo
         </a>
-        <a href="#" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-md transition-colors duration-300">
+        <a href="#" class="inline-block bg-transparent hover:bg-blue-700 border border-white text-white font-bold py-3 px-8 rounded-2xl transition-colors duration-300 shadow-md hover:shadow-2xl hover:translate-0.5">
           Contactar
         </a>
       </div>
     </div>
 
-    <!-- Contenedor de imagen con efecto parallax -->
-    <div 
+    <div
       id="image-container"
       class="md:w-1/2 relative cursor-pointer transition-transform duration-500 ease-out"
     >
-      <img 
-        src="/images/hero-image.jpg" 
-        alt="Prendas Hospitalarias Mundial Quirurgicos" 
+      <img
+        src="/images/hero-image.jpg"
+        alt="Prendas Hospitalarias Mundial Quirurgicos"
         class="rounded-lg shadow-lg transform transition-all duration-500 ease-out"
         id="moving-image"
       />
     </div>
-  </div>
+  </div
 
   <!-- Script para el efecto de movimiento -->
   <script>
@@ -71,4 +70,5 @@
       });
     });
     </script>
+    
 </section>
