@@ -1,41 +1,55 @@
 @import "tailwindcss";
 
 .servicio-detalle {
-    opacity: 0;
-    transform: scale(0.95); /* 🔥 Pequeño zoom-out al cerrar */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* 🔥 Suaviza la animación */
-    pointer-events: none;
     position: fixed;
-    top: 3%;
-    left: 10%;
-    width: 80%;
-    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ¡Centrado perfecto! */
+    width: 95%;
+    max-width: 900px;
+    height: auto;
+    max-height: 85vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     overflow-y: auto;
     z-index: 30;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    background-clip: padding-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(100px);
-}
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}  
 
 .servicio-detalle.active {
     opacity: 1;
-    transform: scale(1); /* 🔥 Hace que el modal crezca suavemente */
     pointer-events: auto;
 }
 
-.servicio-detalle.active > * {
-    width: 70%;
-    max-width: 700px;
-    margin: 1rem auto;
+/* Estilo del botón de cerrar */
+#cerrar-detalle-servicio {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
+#cerrar-detalle-servicio:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+/* Fondo borroso cuando el modal está activo */
 .body-blurred {
     filter: blur(5px);
 }
@@ -47,33 +61,91 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(0px); /* 🔥 Inicialmente sin desenfoque */
+    backdrop-filter: blur(0px);
     z-index: 20;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, backdrop-filter 0.3s ease; /* 🔥 Suaviza la animación */
+    transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .body-overlay.active {
     opacity: 1;
-    backdrop-filter: blur(30px); /* 🔥 Se difumina suavemente */
+    backdrop-filter: blur(30px);
     pointer-events: auto;
 }
 
-#cerrar-detalle-servicio {
-    position: absolute; /* 🔥 Fija el botón dentro del modal */
-    top: 10px; /* Ajusta la distancia desde la parte superior */
-    right: 250px; /* Ajusta la distancia desde la parte derecha */
-    background: none; /* Elimina cualquier fondo */
-    color: rgb(243, 155, 155);
-    border: none;
-    font-size: 2rem; /* Ajusta el tamaño */
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-    z-index: 100; /* Asegura que esté encima de otros elementos */
+/* Mejora la barra de desplazamiento */
+.servicio-detalle::-webkit-scrollbar {
+    width: 6px;
 }
 
-#cerrar-detalle-servicio:hover {
-    opacity: 1;
+.servicio-detalle::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.servicio-detalle::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Ajustes para imágenes dentro del modal */
+.servicio-detalle img {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    max-height: 310px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: -18%;
+}
+
+@media (max-width: 1440px) {
+    .servicio-detalle img {
+        max-height: 280px; /* ¡AUMENTAMOS max-height! */
+        margin-top: -18%;
+    }
+
+    .servicio-detalle {
+        padding: 11.5rem; /* ¡REDUCIMOS padding del modal! */
+    }
+}
+
+@media (max-width: 1024px) {
+    .servicio-detalle img {
+        max-height: 300px; /* ¡AUMENTAMOS max-height! */
+        margin-top: -25%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+
+    .servicio-detalle {
+        padding: 10.5rem; /* ¡REDUCIMOS padding del modal! */
+    }
+}
+
+@media (max-width: 768px) {
+    .servicio-detalle img {
+        max-height: 270px;
+        margin-top: 3%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+    .servicio-detalle {
+        padding: 1.5rem; /* ¡REDUCIMOS padding del modal! */
+    }
+}
+
+@media (max-width: 480px) {
+    .servicio-detalle img {
+        max-height: 250px;
+        margin-top: 3%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+    .servicio-detalle {
+        padding: 1.5rem; /* ¡REDUCIMOS padding del modal! */
+    }
 }
