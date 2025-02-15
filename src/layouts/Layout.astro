@@ -1,22 +1,56 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Mundial Quirurgicos</title>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-md py-4">
+      <div class="container mx-auto px-4">
+        <h1 class="text-xl font-bold text-gray-800">Mundial Quirurgicos</h1>
+      </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+      <slot />
+    </main>
+	<footer class="bg-gray-200 py-8">
+		<div class="container mx-auto px-4">
+		  <div class="md:flex md:justify-between md:items-center">
+			<div class="mb-4 md:mb-0">
+			  <p class="text-gray-700">&copy; {new Date().getFullYear()} Mundial Quirurgicos. Todos los derechos reservados.</p>
+			</div>
+			<div>
+			  <ul class="flex space-x-6 justify-center md:justify-start">
+				<li>
+				  <a href="#" class="text-gray-700 hover:text-gray-900">Inicio</a>
+				</li>
+				<li>
+				  <a href="#" class="text-gray-700 hover:text-gray-900">Productos</a>
+				</li>
+				<li>
+				  <a href="#" class="text-gray-700 hover:text-gray-900">Servicios</a>
+				</li>
+				<li>
+				  <a href="#" class="text-gray-700 hover:text-gray-900">Sobre Nosotros</a>
+				</li>
+				<li>
+				  <a href="#" class="text-gray-700 hover:text-gray-900">Contacto</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		  <div class="mt-4 text-center md:text-left">
+			<p class="text-gray-600 text-sm">
+			  Dirección: Calle Falsa 123, Bogotá, Colombia | Teléfono: +57 1 234 5678 | Email: info@mundialquirurgicos.com
+			</p>
+		  </div>
+		</div>
+	  </footer>
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

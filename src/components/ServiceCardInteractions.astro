@@ -1,0 +1,18 @@
+---
+// src/components/ServiceCardInteractions.astro
+---
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const servicioCards = document.querySelectorAll('.max-w-sm');
+    
+        servicioCards.forEach(card => {
+            const servicioDetalle = card.querySelector('.servicio-detalle');
+    
+            if (!servicioDetalle) return;
+    
+            card.addEventListener('click', () => {
+                servicioDetalle.classList.toggle('active');
+            });
+        });
+    });
+    </script>
