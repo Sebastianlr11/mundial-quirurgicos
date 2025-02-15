@@ -8,65 +8,22 @@ import HeroSection from '../components/HeroSection.astro';
 import ProductsSection from '../components/ProductsSection.astro';
 import AboutUsSection from '../components/AboutUsSection.astro';
 import ServicesSection from '../components/ServicesSection.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import ConfeccionesEmpresarialesDetail from '../components/service-details/ConfeccionesEmpresarialesDetail.astro';
-import ServicioDeCorteDetail from '../components/service-details/ServicioDeCorteDetail.astro';
-import EsteticaYBellezaDetail from '../components/service-details/EsteticaYBellezaDetail.astro';
-import ConfeccionDeMaquilaDetail from '../components/service-details/ConfeccionDeMaquilaDetail.astro';
+// Importamos los nuevos componentes de tarjetas de servicio:
+import ConfeccionesEmpresarialesCard from '../components/services/ConfeccionesEmpresarialesCard.astro';
+import ServicioDeCorteCard from '../components/services/ServicioDeCorteCard.astro';
+import EsteticaYBellezaCard from '../components/services/EsteticaYBellezaCard.astro';
+import ConfeccionDeMaquilaCard from '../components/services/ConfeccionDeMaquilaCard.astro';
 ---
 
 <Layout>
     <main>
         <HeroSection />
-		<ServicesSection>
-            <ServiceCard>
-                <Fragment slot="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" style="vertical-align: -webkit-baseline-middle;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                    </svg>
-                </Fragment>
-                <Fragment slot="title">Confecciones Empresariales</Fragment>
-                <Fragment slot="description">Ofrecemos confecciones empresariales a medida, uniformes y prendas personalizadas.</Fragment>
-                <Fragment slot="detail"><ConfeccionesEmpresarialesDetail /></Fragment>
-                <Fragment slot="image">
-                    <img src="https://via.placeholder.com/300x200/007bff/FFFFFF?text=Imagen+Empresarial" alt="Imagen Confecciones Empresariales" class="w-full h-auto mb-4 rounded-lg" />
-                </Fragment>
-            </ServiceCard>
-            <ServiceCard>
-                <Fragment slot="icon">
-                    <svg class="w-8 h-8 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-7-7V11m0 12H9a2 2 0 01-2-2v-6a2 2 0 012-2h10a2 2 0 012 2v6a2 2 0 01-2 2H9z"></path></svg>
-                </Fragment>
-                <Fragment slot="title">Servicio De Corte</Fragment>
-                <Fragment slot="description">Brindamos un servicio especializado de corte de tela quirúrgica, garantizando precisión y eficiencia.</Fragment>
-                <Fragment slot="detail"><ServicioDeCorteDetail /></Fragment>
-                <Fragment slot="image">
-                    <img src="https://via.placeholder.com/300x200/28a745/FFFFFF?text=Imagen+Corte" alt="Imagen Servicio de Corte" class="w-full h-auto mb-4 rounded-lg" />
-                </Fragment>
-            </ServiceCard>
-            <ServiceCard>
-                <Fragment slot="icon">
-                    <svg class="w-8 h-8 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0116.5 15.982V18a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2.764l10.586-10.586a2 2 0 012.828 0L16 7.768a2 2 0 010 2.828L8.232 17H15z"></path></svg>
-                </Fragment>
-                <Fragment slot="title">Estética y Belleza</Fragment>
-                <Fragment slot="description">Asesoramiento experto para elegir productos ideales para tu spa o centro de bienestar.</Fragment>
-                <Fragment slot="detail"><EsteticaYBellezaDetail /></Fragment>
-                <Fragment slot="image">
-                    <img src="https://via.placeholder.com/300x200/ffc107/000000?text=Imagen+Estetica" alt="Imagen Estetica y Belleza" class="w-full h-auto mb-4 rounded-lg" />
-                </Fragment>
-            </ServiceCard>
-            <ServiceCard>
-                <Fragment slot="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" style="vertical-align: -webkit-baseline-middle;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                    </svg>
-                </Fragment>
-                <Fragment slot="title">Confección De Maquila</Fragment>
-                <Fragment slot="description">Experiencia, profesionalismo y logística para producir tus diseños con altos estándares de calidad.</Fragment>
-                <Fragment slot="detail"><ConfeccionDeMaquilaDetail /></Fragment>
-                <Fragment slot="image">
-                    <img src="https://via.placeholder.com/300x200/00bcd4/FFFFFF?text=Imagen+Maquila" alt="Imagen Confeccion de Maquila" class="w-full h-auto mb-4 rounded-lg" />
-                </Fragment>
-            </ServiceCard>
+        <ServicesSection>
+            {/* Usamos los nuevos componentes de tarjetas de servicio: */}
+            <ConfeccionesEmpresarialesCard />
+            <ServicioDeCorteCard />
+            <EsteticaYBellezaCard />
+            <ConfeccionDeMaquilaCard />
         </ServicesSection>
         <ProductsSection />
         <AboutUsSection />

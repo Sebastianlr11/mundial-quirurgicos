@@ -2,17 +2,45 @@
 // src/components/ServiceCardInteractions.astro
 ---
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const servicioCards = document.querySelectorAll('.max-w-sm');
-    
-        servicioCards.forEach(card => {
-            const servicioDetalle = card.querySelector('.servicio-detalle');
-    
-            if (!servicioDetalle) return;
-    
-            card.addEventListener('click', () => {
-                servicioDetalle.classList.toggle('active');
-            });
+document.addEventListener('DOMContentLoaded', () => {
+    const servicioCards = document.querySelectorAll('.max-w-sm');
+    const bodyOverlay = document.querySelector('.body-overlay');
+
+    if (!bodyOverlay) return;
+
+    servicioCards.forEach(card => {
+        const servicioDetalle = card.querySelector('.servicio-detalle');
+        const botonCerrar = servicioDetalle?.querySelector('#cerrar-detalle-servicio');
+
+        if (!servicioDetalle) return;
+
+        card.addEventListener('click', () => {
+            servicioDetalle.classList.toggle('active');
+            bodyOverlay.classList.toggle('active');
+        });
+
+        // 🔥 Cerrar el modal al hacer clic en el overlay (fuera del modal)
+        bodyOverlay.addEventListener('click', (event) => {
+            const targetElement = event.target; // Guardamos el target
+            if (!(targetElement instanceof HTMLElement) || !servicioDetalle.contains(targetElement)) {
+                servicioDetalle.classList.remove('active');
+                bodyOverlay.classList.remove('active');
+            }
+        });
+
+        // Evitar que los clics dentro del modal cierren el modal
+        servicioDetalle.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Cerrar con el botón X
+        botonCerrar?.addEventListener('click', (e) => {
+            e.preventDefault();
+            servicioDetalle.classList.remove('active');
+            bodyOverlay.classList.remove('active');
         });
     });
-    </script>
+});
+
+
+</script>

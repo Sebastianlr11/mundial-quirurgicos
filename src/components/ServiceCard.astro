@@ -1,7 +1,7 @@
 ---
-// src/components/ServiceCard.astro
-
+const showVideo = !!Astro.props.video;
 ---
+
 <div class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
   <div class="p-6">
     <div class="flex items-center justify-center h-12 w-12 mx-auto mb-3 text-blue-700">
@@ -9,13 +9,21 @@
     </div>
     <h3 class="text-xl font-semibold text-gray-900 text-center mb-2"><slot name="title" /></h3>
     <p class="text-gray-700 text-center text-sm"><slot name="description" /></p>
+
+    <!-- Modal de detalle -->
     <div class="mt-4 servicio-detalle absolute z-20 left-0 top-0 w-full h-full bg-white p-6 rounded-xl shadow-md opacity-0 pointer-events-none transition-opacity duration-300 overflow-y-auto">
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" id="cerrar-detalle-servicio"> {/* Botón de cierre */}
+        <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" id="cerrar-detalle-servicio">
             <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
             </svg>
         </button>
-        <slot name="image" />
+
+        <!-- 🔥 Mostrar imagen si NO hay video -->
+        {showVideo ? null : <slot name="image" />}
+
+        <!-- 🔥 Mostrar video si existe -->
+        <slot name="video" />
+
         <slot name="detail" />
     </div>
   </div>

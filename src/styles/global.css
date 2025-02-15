@@ -1,28 +1,79 @@
 @import "tailwindcss";
 
-.servicio-detalle.active {
-    opacity: 1;
-    pointer-events: auto;
+.servicio-detalle {
+    opacity: 0;
+    transform: scale(0.95); /* 🔥 Pequeño zoom-out al cerrar */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 🔥 Suaviza la animación */
+    pointer-events: none;
     position: fixed;
     top: 3%;
-    left: 5%;
-    width: 90%;
+    left: 10%;
+    width: 80%;
     height: 90%;
     overflow-y: auto;
     z-index: 30;
-    background-color: white; /* Fondo oscuro semi-transparente para el fondo de pantalla completa */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-clip: padding-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: center;
+    padding: 2rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(10px); /* Aumentamos el desenfoque a 10px */
+    backdrop-filter: blur(100px);
+}
+
+.servicio-detalle.active {
+    opacity: 1;
+    transform: scale(1); /* 🔥 Hace que el modal crezca suavemente */
+    pointer-events: auto;
 }
 
 .servicio-detalle.active > * {
-    width: 70%; /* Ancho máximo del contenido del detalle en pantalla completa */
-    max-width: 700px; /* Limitar aún más el ancho en pantallas muy grandes */
-    margin: 2rem auto; /* Margen superior e inferior y centrado horizontal */
-    
+    width: 70%;
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
+.body-blurred {
+    filter: blur(5px);
+}
+
+.body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0px); /* 🔥 Inicialmente sin desenfoque */
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, backdrop-filter 0.3s ease; /* 🔥 Suaviza la animación */
+}
+
+.body-overlay.active {
+    opacity: 1;
+    backdrop-filter: blur(30px); /* 🔥 Se difumina suavemente */
+    pointer-events: auto;
+}
+
+#cerrar-detalle-servicio {
+    position: absolute; /* 🔥 Fija el botón dentro del modal */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 250px; /* Ajusta la distancia desde la parte derecha */
+    background: none; /* Elimina cualquier fondo */
+    color: rgb(243, 155, 155);
+    border: none;
+    font-size: 2rem; /* Ajusta el tamaño */
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    z-index: 100; /* Asegura que esté encima de otros elementos */
+}
+
+#cerrar-detalle-servicio:hover {
+    opacity: 1;
 }

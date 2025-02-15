@@ -1,0 +1,19 @@
+---
+// src/components/services/ConfeccionesEmpresarialesCard.astro
+import ServiceCard from '../ServiceCard.astro';
+import ConfeccionDeMaquilaDetail from '../service-details/ConfeccionDeMaquilaDetail.astro';
+---
+
+<ServiceCard>
+    <Fragment slot="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" style="vertical-align: -webkit-baseline-middle;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+        </svg>
+    </Fragment>
+    <Fragment slot="title">Confección De Maquila</Fragment>
+    <Fragment slot="description">Experiencia, profesionalismo y logística para producir tus diseños con altos estándares de calidad.</Fragment>
+    <Fragment slot="detail"><ConfeccionDeMaquilaDetail /></Fragment>
+    <Fragment slot="image">
+        <img src="https://via.placeholder.com/300x200/00bcd4/FFFFFF?text=Imagen+Maquila" alt="Imagen Confeccion de Maquila" class="w-full h-auto mb-4 rounded-lg" />
+    </Fragment>
+</ServiceCard>

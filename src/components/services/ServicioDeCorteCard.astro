@@ -1,0 +1,17 @@
+---
+// src/components/services/ConfeccionesEmpresarialesCard.astro
+import ServiceCard from '../ServiceCard.astro';
+import ServicioDeCorteDetail from '../service-details/ServicioDeCorteDetail.astro';
+---
+
+<ServiceCard>
+    <Fragment slot="icon">
+        <svg class="w-8 h-8 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-7-7V11m0 12H9a2 2 0 01-2-2v-6a2 2 0 012-2h10a2 2 0 012 2v6a2 2 0 01-2 2H9z"></path></svg>
+    </Fragment>
+    <Fragment slot="title">Servicio De Corte</Fragment>
+    <Fragment slot="description">Brindamos un servicio especializado de corte de tela quirúrgica, garantizando precisión y eficiencia.</Fragment>
+    <Fragment slot="detail"><ServicioDeCorteDetail /></Fragment>
+    <Fragment slot="image">
+        <img src="https://www.mesasdecorte.com.co/wp-content/uploads/2018/11/EX-23_2.jpg" alt="Imagen Servicio de Corte" class="w-full h-auto mb-4 rounded-lg" />
+    </Fragment>
+</ServiceCard>
