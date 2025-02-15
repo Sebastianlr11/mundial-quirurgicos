@@ -150,4 +150,6 @@
     }
 }
 
-
+#image-container {
+    perspective: 1000px; /* Agrega esto en tu CSS */
+  }

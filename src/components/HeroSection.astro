@@ -2,27 +2,73 @@
 // src/components/HeroSection.astro
 ---
 
-
-<section class="py-24 bg-blue-200">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-      <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Prendas Hospitalarias de Alta Calidad
-        </h1>
-        <p class="text-gray-700 text-lg mb-8">
-          Fabricamos y distribuimos batas quirúrgicas, ropa de paciente y uniformes médicos con los más altos estándares de calidad y bioseguridad.
-        </p>
-        <div class="space-x-4">
-          <a href="#" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md">
-            Ver Catálogo
-          </a>
-          <a href="#" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-md">
-            Contactar
-          </a>
-        </div>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/images/hero-image.jpg" alt="Prendas Hospitalarias Mundial Quirurgicos" class="rounded-lg shadow-lg hover:scale-110" />
+<section class="py-24 bg-blue-200 relative overflow-hidden">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+    <!-- Texto y botones -->
+    <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Prendas Hospitalarias de Alta Calidad
+      </h1>
+      <p class="text-gray-700 text-lg mb-8">
+        Fabricamos y distribuimos batas quirúrgicas, ropa de paciente y uniformes médicos con los más altos estándares de calidad y bioseguridad.
+      </p>
+      <div class="space-x-4">
+        <a href="#" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md transition-colors duration-300">
+          Ver Catálogo
+        </a>
+        <a href="#" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-md transition-colors duration-300">
+          Contactar
+        </a>
       </div>
     </div>
-  </section>
+
+    <!-- Contenedor de imagen con efecto parallax -->
+    <div 
+      id="image-container"
+      class="md:w-1/2 relative cursor-pointer transition-transform duration-500 ease-out"
+    >
+      <img 
+        src="/images/hero-image.jpg" 
+        alt="Prendas Hospitalarias Mundial Quirurgicos" 
+        class="rounded-lg shadow-lg transform transition-all duration-500 ease-out"
+        id="moving-image"
+      />
+    </div>
+  </div>
+
+  <!-- Script para el efecto de movimiento -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const image = document.getElementById('moving-image');
+      const container = document.getElementById('image-container');
+    
+      if (!image || !container) return;
+    
+      const sensitivity = 3.5;
+      const rotationIntensity = 2.0;
+    
+      // Agregar tipo MouseEvent al parámetro
+      const handleMouseMove = (e: MouseEvent) => {
+        const { left, top, width, height } = container.getBoundingClientRect();
+        const mouseX = e.clientX - left;
+        const mouseY = e.clientY - top;
+        
+        const relX = (mouseX / width - 0.4) * sensitivity;
+        const relY = (mouseY / height - 0.4) * sensitivity;
+    
+        image.style.transform = `
+          translate(${relX * -0.6}%, ${relY * -0.6}%)
+          rotateX(${relY * -7.5}deg)
+          rotateY(${relX * 7.5}deg)
+         
+        `;
+      };
+    
+      // Usar optional chaining para mayor seguridad
+      container?.addEventListener('mousemove', handleMouseMove);
+      container?.addEventListener('mouseleave', () => {
+        image.style.transform = 'translate(0, 0) rotateX(0) rotateY(0)';
+      });
+    });
+    </script>
+</section>
