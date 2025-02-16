@@ -1,0 +1,212 @@
+---
+// src/pages/contacto.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contáctanos">
+  <main class="container mx-auto mt-10 p-4">
+    <!-- Encabezado con gradiente -->
+    <h1 class="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 mb-10">
+      Contáctanos
+    </h1>
+
+    <!-- Información de Contacto -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+        <h2 class="text-2xl font-bold mb-4">Nuestra Oficina Central</h2>
+        <address class="not-italic text-gray-700 text-lg">
+          Calle Principal #123, Oficina 456<br />
+          Ciudad, Provincia, País<br />
+          Código Postal
+        </address>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+        <h2 class="text-2xl font-bold mb-4">Comunícate con Nosotros</h2>
+      
+        <!-- Teléfono -->
+        <p class="mb-2 text-lg flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="w-6 h-6 text-blue-500 mr-2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M22.675 0h-21.35C0.59 0 0 0.59 0 1.325v21.351C0 23.409 0.59 24 1.325 24H12.82v-9.294H9.692V11.09h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464 0.099 2.797 0.143v3.243l-1.918 0.001c-1.504 0-1.794 0.715-1.794 1.763v2.312h3.587l-0.467 3.617h-3.12V24h6.116C23.41 24 24 23.409 24 22.675V1.325C24 0.59 23.41 0 22.675 0z" />
+          </svg>
+          <strong class="font-semibold">Teléfono:</strong>
+          <a href="tel:+1234567890" class="text-blue-500 hover:underline ml-2">
+            +1 234 567 890
+          </a>
+        </p>
+      
+        <!-- Email -->
+        <p class="mb-2 text-lg flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="w-6 h-6 text-blue-500 mr-2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+          <strong class="font-semibold">Email:</strong>
+          <a
+            href="mailto:info@example.com"
+            class="text-blue-500 hover:underline ml-2"
+          >
+            info@example.com
+          </a>
+        </p>
+      
+        <!-- WhatsApp -->
+        <p class="mb-2 text-lg flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="w-6 h-6 text-green-500 mr-2"
+            viewBox="0 0 448 512"
+          >
+            <path d="M380.9 97.1C339 55.2 283.4 32 224 32 100.3 32 0 132.3 0 256c0 45.4 12 89.8 34.7 128.2L0 480l95.5-34.7C135.8 500 180.2 512 224 512c123.7 0 224-100.3 224-256 0-59.4-23.2-115-67.1-158.9zM224 464c-39.8 0-78.8-10.6-112.4-30.8l-8.1-4.8L48 432l28.4-55.5-4.8-8.1C22.6 332.8 12 293.8 12 254 12 134.3 110.3 36 230 36c59.4 0 115 23.2 158.9 67.1 43.9 43.9 67.1 99.5 67.1 158.9 0 119.7-98.3 218-218 218zM313.6 310.8c-4.1 11.7-20.2 22.2-28.6 24.5-8.1 2.4-18.5 3.5-29.1-2.2s-37.5-17.4-71.6-43.8c-26.5-23.6-44.2-52.5-49.4-60.9s-.8-21.3 2.2-29.1c2.4-8.4 12.8-24.5 24.5-28.6 11.7-4.1 22.9-5.3 30.3-2.2 7.4 3.1 27.9 13.2 46.3 26.1 18.4 12.8 34.3 23.8 38.9 27.9 4.5 4.2 7.2 9.4 8.4 14.7 1.2 5.3.6 12.8-2.2 21.8z" />
+          </svg>
+          <strong class="font-semibold">WhatsApp:</strong>
+          <a
+            href="https://wa.me/1234567890"
+            target="_blank"
+            class="text-green-500 hover:underline ml-2"
+          >
+            Chatea con nosotros por WhatsApp
+          </a>
+        </p>
+      </div>
+      
+
+    <!-- Formulario de Contacto -->
+    <section class="mt-12 p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+      <h2 class="text-2xl font-bold mb-4">Formulario de Contacto</h2>
+      <form class="space-y-4">
+        <div>
+          <label for="nombre" class="block text-lg font-medium text-gray-700">Nombre</label>
+          <div class="mt-1">
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-lg border-gray-300 rounded-md"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-lg font-medium text-gray-700">Correo Electrónico</label>
+          <div class="mt-1">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tu@email.com"
+              class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-lg border-gray-300 rounded-md"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="mensaje" class="block text-lg font-medium text-gray-700">Mensaje</label>
+          <div class="mt-1">
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Escribe tu mensaje aquí..."
+              class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-lg border-gray-300 rounded-md"
+            ></textarea>
+          </div>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="inline-flex justify-center py-3 px-6 border border-transparent shadow-md font-medium rounded-full text-white bg-gradient-to-r from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform duration-300 hover:scale-105"
+          >
+            Enviar Mensaje
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Ubicación en el Mapa -->
+    <section class="mt-12 p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+      <h2 class="text-2xl font-bold mb-4">Ubicación en el Mapa</h2>
+      <div class="aspect-video rounded-lg overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.149785199478!2d-74.1287857852439!3d4.610159398669513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f956728248ccb%3A0x5995b1786c0a9a9f!2sCra.%2079a%20%2335-74%20Sur%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses-419!2sus!4v1708098810543!5m2!1ses-419!2sus"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+ <!-- Redes Sociales -->
+<section class="mt-12 p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+    <h2 class="text-2xl font-bold mb-4">Síguenos en Redes Sociales</h2>
+    <div class="flex justify-center space-x-6">
+      <!-- Facebook -->
+      <a
+        href="https://facebook.com/your-page-here"
+        target="_blank"
+        class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 text-lg transition-colors duration-300"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+          <path d="M22.675 0h-21.35C0.59 0 0 0.59 0 1.325v21.351C0 23.409 0.59 24 1.325 24H12.82v-9.294H9.692V11.09h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464 0.099 2.797 0.143v3.243l-1.918 0.001c-1.504 0-1.794 0.715-1.794 1.763v2.312h3.587l-0.467 3.617h-3.12V24h6.116C23.41 24 24 23.409 24 22.675V1.325C24 0.59 23.41 0 22.675 0z"/>
+        </svg>
+        <span>Facebook</span>
+      </a>
+  
+      <!-- Instagram -->
+      <a
+        href="https://instagram.com/your-profile-here"
+        target="_blank"
+        class="flex items-center space-x-2 text-pink-500 hover:text-pink-700 text-lg transition-colors duration-300"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.31.974.975 1.248 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.31 3.608-.975.974-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.31-.974-.975-1.248-2.242-1.31-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.31-3.608.975-.974 2.242-1.248 3.608-1.31C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.131 4.633.393 3.678 1.348c-.955.955-1.217 2.098-1.276 3.375C2.013 5.668 2 6.078 2 9.337v5.326c0 3.259.013 3.669.072 4.95.059 1.277.321 2.42 1.276 3.375.955.955 2.098 1.217 3.375 1.276 1.28.059 1.689.072 4.948.072s3.669-.013 4.95-.072c1.277-.059 2.42-.321 3.375-1.276.955-.955 1.217-2.098 1.276-3.375.059-1.28.072-1.689.072-4.948s-.013-3.669-.072-4.95c-.059-1.277-.321-2.42-1.276-3.375-.955-.955-2.098-1.217-3.375-1.276C15.668.013 15.259 0 12 0z"/>
+          <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324A6.162 6.162 0 0 0 12 5.838zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z"/>
+          <circle cx="18.406" cy="5.594" r="1.44"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+  
+      <!-- LinkedIn -->
+      <a
+        href="https://linkedin.com/in/your-profile-here"
+        target="_blank"
+        class="flex items-center space-x-2 text-blue-700 hover:text-blue-900 text-lg transition-colors duration-300"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+          <path d="M22.23 0H1.77C0.79 0 0 0.77 0 1.72v20.56C0 23.23 0.79 24 1.77 24H22.23C23.21 24 24 23.23 24 22.28V1.72C24 0.77 23.21 0 22.23 0zM7.09 20.45H3.56V9H7.09v11.45zM5.33 7.45C4.19 7.45 3.27 6.53 3.27 5.39 3.27 4.25 4.19 3.33 5.33 3.33 6.47 3.33 7.39 4.25 7.39 5.39c0 1.14-.92 2.06-2.06 2.06zM20.45 20.45h-3.53v-5.99c0-1.43-.03-3.27-2-3.27-2 0-2.31 1.56-2.31 3.16v6.1H9.94V9h3.4v1.56h.05c.47-.89 1.62-1.83 3.33-1.83 3.56 0 4.22 2.34 4.22 5.38v6.34z"/>
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </section>
+  
+  
+
+    <!-- Horario de Atención -->
+    <section class="mt-12 p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+      <h2 class="text-2xl font-bold mb-4">Horario de Atención</h2>
+      <p class="text-gray-700 text-lg">
+        Nuestro horario de atención es:
+      </p>
+      <ul class="list-disc list-inside text-gray-700 mt-2 text-lg">
+        <li>Lunes a Viernes: 9:00 AM - 6:00 PM</li>
+        <li>Sábados: 10:00 AM - 2:00 PM</li>
+        <li>Domingos y Festivos: Cerrado</li>
+      </ul>
+    </section>
+  </main>
+</Layout>
