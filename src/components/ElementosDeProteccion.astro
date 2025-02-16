@@ -2,19 +2,127 @@
 // ElementosDeProteccion.astro
 ---
 
-<section class="bg-white py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Dotaciones Empresariales</h2>
-      <p class="text-gray-600 mb-8">Distribuimos materiales y equipos para medicina, odontología, estética y muebles hospitalarios en Bogotá y Colombia.</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <div class="bg-gray-100 rounded-lg shadow-md p-6">
-          <img src="/images/bata-quirurgica.jpg" alt="Bata Quirúrgica" class="w-full h-48 object-cover mb-4 rounded-md">
-          <h3 class="text-xl font-medium text-gray-800">Bata Quirúrgica</h3>
-        </div>
-        {/* Repite este bloque para otros productos */}
+<section class="bg-transparent py-16">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Dotaciones Empresariales Profesionales</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            Equipamos instituciones médicas con materiales de la más alta calidad para medicina, odontología, estética y mobiliario hospitalario en toda Colombia.
+        </p>
       </div>
-      <div class="mt-8 text-center">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">Ver Catálogo</button>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Product Item con animaciones mejoradas -->
+        <article class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-out hover:-translate-y-2">
+          <div class="overflow-hidden rounded-t-xl relative">
+            <img 
+              src="/images/elementos1.jpg" 
+              alt="Bata Quirúrgica Profesional" 
+              class="w-full h-56 object-cover transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-110"
+              width="400"
+              height="300"
+              loading="lazy"
+            >
+            <!-- Efecto overlay sutil -->
+            <div class="absolute inset-0 bg-black/5 transition-opacity duration-300 group-hover:opacity-0"></div>
+          </div>
+          
+          <div class="p-6 relative">
+            <!-- Línea decorativa animada -->
+            <div class="absolute top-0 left-1/2 w-0 h-[2px] bg-blue-600 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
+            
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-blue-600">
+              Bata Quirúrgica
+            </h3>
+            <p class="text-gray-600 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+              Algodón premium, tallas S-XXL
+            </p>
+          </div>
+        </article>
+
+        <!-- Repetir con diferentes productos -->
+        <article class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-out hover:-translate-y-2">
+          <div class="overflow-hidden rounded-t-xl relative">
+            <img 
+              src="/images/elementos2.jpg" 
+              alt="Kit Odontológico Completo" 
+              class="w-full h-56 object-cover transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-110"
+              width="400"
+              height="300"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-black/5 transition-opacity duration-300 group-hover:opacity-0"></div>
+          </div>
+          
+          <div class="p-6 relative">
+            <div class="absolute top-0 left-1/2 w-0 h-[2px] bg-blue-600 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-blue-600">
+              Kit Odontológico
+            </h3>
+            <p class="text-gray-600 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+              Incluye 25 piezas esterilizadas
+            </p>
+          </div>
+        </article>
+
+        <article class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-out hover:-translate-y-2">
+            <div class="overflow-hidden rounded-t-xl relative">
+              <img 
+                src="/images/elementos3.jpg" 
+                alt="Kit Odontológico Completo" 
+                class="w-full h-56 object-cover transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-110"
+                width="400"
+                height="300"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-black/5 transition-opacity duration-300 group-hover:opacity-0"></div>
+            </div>
+            
+            <div class="p-6 relative">
+              <div class="absolute top-0 left-1/2 w-0 h-[2px] bg-blue-600 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-blue-600">
+                Kit Odontológico
+              </h3>
+              <p class="text-gray-600 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                Incluye 25 piezas esterilizadas
+              </p>
+            </div>
+          </article>
+
+          <article class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-out hover:-translate-y-2">
+            <div class="overflow-hidden rounded-t-xl relative">
+              <img 
+                src="/images/elementos4.jpg" 
+                alt="Kit Odontológico Completo" 
+                class="w-full h-56 object-cover transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-110"
+                width="400"
+                height="300"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-black/5 transition-opacity duration-300 group-hover:opacity-0"></div>
+            </div>
+            
+            <div class="p-6 relative">
+              <div class="absolute top-0 left-1/2 w-0 h-[2px] bg-blue-600 transition-all duration-500 group-hover:w-full group-hover:left-0"></div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-blue-600">
+                Kit Odontológico
+              </h3>
+              <p class="text-gray-600 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                Incluye 25 piezas esterilizadas
+              </p>
+            </div>
+          </article>
+
+        <!-- ... (resto de productos con mismo patrón) ... -->
+      </div>
+
+      <div class="mt-12 text-center">
+        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+          Ver Catálogo Completo
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+          </svg>
+        </button>
       </div>
     </div>
-  </section>
+</section>

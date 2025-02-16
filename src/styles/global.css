@@ -154,3 +154,10 @@
     perspective: 1000px; /* Agrega esto en tu CSS */
   }
 
+/* En tu CSS global */
+@media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      transform: none !important;
+    }
+  }
