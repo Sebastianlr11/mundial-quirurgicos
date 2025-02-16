@@ -1,0 +1,93 @@
+---
+// src/pages/servicios.astro
+import Layout from '../layouts/Layout.astro'; // Importa tu layout
+---
+
+<Layout title="Servicios">
+  <main class="container mx-auto mt-10 p-4">
+    <!-- Encabezado Principal con Gradiente -->
+    <h1 class="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 mb-10">
+      Nuestros Servicios
+    </h1>
+
+    <p class="text-gray-700 text-lg text-center mb-12 leading-relaxed max-w-3xl mx-auto">
+      En Mundial Quirúrgicos SAS, nos especializamos en la dotación integral de instituciones médicas en Colombia. 
+      Ofrecemos un amplio portafolio de productos y servicios diseñados para cubrir todas las necesidades de hospitales, clínicas, 
+      consultorios y centros de estética, garantizando siempre la más alta calidad y el mejor servicio.
+    </p>
+
+    <!-- Sección: Dotación de Equipos Médicos -->
+    <section class="mb-12">
+      <div class="p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">Dotación de Equipos Médicos</h2>
+        <p class="text-gray-700 mb-4">
+          Proveemos una completa gama de equipos médicos de última tecnología para diversas especialidades.
+        </p>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Mobiliario Hospitalario: Camas hospitalarias, camillas, mesas de examen, etc.</li>
+          <li>Equipos de Diagnóstico: Electrocardiógrafos, ecógrafos, equipos de rayos X, etc.</li>
+          <li>Equipos Quirúrgicos: Mesas de cirugía, lámparas quirúrgicas, instrumental quirúrgico especializado.</li>
+          <li>Equipos de Monitoreo de Pacientes: Monitores de signos vitales, oxímetros, etc.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección: Suministro de Material Médico Descartable -->
+    <section class="mb-12">
+      <div class="p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">Suministro de Material Médico Descartable</h2>
+        <p class="text-gray-700 mb-4">
+          Garantizamos el suministro constante y oportuno de insumos médicos y material de curación de la más alta calidad.
+        </p>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Material de Curación: Gasas, vendas, apósitos, algodón, etc.</li>
+          <li>Insumos Médicos: Jeringas, agujas, catéteres, guantes, etc.</li>
+          <li>Material de Esterilización: Autoclaves, bolsas de esterilización, indicadores biológicos, etc.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección: Equipamiento Odontológico -->
+    <section class="mb-12">
+      <div class="p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">Equipamiento Odontológico</h2>
+        <p class="text-gray-700 mb-4">
+          Ofrecemos soluciones integrales para consultorios y clínicas odontológicas, desde equipos hasta materiales.
+        </p>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Unidades Odontológicas Completas: Sillones, lámparas, escupideras, etc.</li>
+          <li>Instrumental Rotatorio: Turbinas, micromotores, contra-ángulos.</li>
+          <li>Materiales Dentales: Resinas, cementos, amalgamas, materiales de impresión.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección: Equipamiento para Estética -->
+    <section class="mb-12">
+      <div class="p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">Equipamiento para Estética</h2>
+        <p class="text-gray-700 mb-4">
+          Dotamos centros de estética con equipos modernos y mobiliario confortable para ofrecer tratamientos de vanguardia.
+        </p>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Equipos Faciales: Equipos de limpieza facial, microdermoabrasión, radiofrecuencia facial.</li>
+          <li>Equipos Corporales: Cavitación, radiofrecuencia corporal, presoterapia.</li>
+          <li>Mobiliario para Centros de Estética: Camillas de estética, sillas de pedicura, lámparas de lupa.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección CTA -->
+    <section class="text-center mt-16">
+      <p class="text-lg text-gray-700 mb-4">
+        ¿Interesado en conocer más sobre nuestros servicios o solicitar una cotización?
+      </p>
+      <a 
+        href="/contacto"
+        class="inline-block bg-gradient-to-r from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-500 text-white font-bold py-3 px-8 rounded-lg transition-transform duration-300 transform hover:scale-105"
+      >
+        Contáctanos Hoy Mismo
+      </a>
+    </section>
+  </main>
+</Layout>
