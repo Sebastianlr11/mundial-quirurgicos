@@ -19,6 +19,7 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
     pointer-events: none;
+    margin-top: 50px;
 }  
 
 .servicio-detalle.active {
