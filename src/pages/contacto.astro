@@ -15,69 +15,53 @@ import Layout from '../layouts/Layout.astro';
       <div class="p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
         <h2 class="text-2xl font-bold mb-4">Nuestra Oficina Central</h2>
         <address class="not-italic text-gray-700 text-lg">
-          Calle Principal #123, Oficina 456<br />
-          Ciudad, Provincia, País<br />
-          Código Postal
+          Carrera 79 a #35-74 Sur<br />
+          Barrio Francisco José De Caldas<br />
+          Bogotá DC, CO
         </address>
       </div>
       <div class="p-6 bg-white shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
         <h2 class="text-2xl font-bold mb-4">Comunícate con Nosotros</h2>
-      
+        
         <!-- Teléfono -->
         <p class="mb-2 text-lg flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            class="w-6 h-6 text-blue-500 mr-2"
-            viewBox="0 0 24 24"
-          >
-            <path d="M22.675 0h-21.35C0.59 0 0 0.59 0 1.325v21.351C0 23.409 0.59 24 1.325 24H12.82v-9.294H9.692V11.09h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464 0.099 2.797 0.143v3.243l-1.918 0.001c-1.504 0-1.794 0.715-1.794 1.763v2.312h3.587l-0.467 3.617h-3.12V24h6.116C23.41 24 24 23.409 24 22.675V1.325C24 0.59 23.41 0 22.675 0z" />
+          <!-- Icono Teléfono (Feather) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3.9a2 2 0 0 1 2 1.72c.13 1 .52 2 1.17 2.73a2 2 0 0 1-.45 2.33L9.5 9.5a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.33-.45c.73.65 1.04 1.65 1.17 2.73A2 2 0 0 1 22 16.92z"></path>
           </svg>
           <strong class="font-semibold">Teléfono:</strong>
-          <a href="tel:+1234567890" class="text-blue-500 hover:underline ml-2">
-            +1 234 567 890
+          <a href="tel:+573168341338" class="text-blue-500 hover:underline ml-2">
+            +57 3168341338
           </a>
         </p>
-      
+        
         <!-- Email -->
         <p class="mb-2 text-lg flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            class="w-6 h-6 text-blue-500 mr-2"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          <!-- Icono Email (Feather) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+            <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
           <strong class="font-semibold">Email:</strong>
-          <a
-            href="mailto:info@example.com"
-            class="text-blue-500 hover:underline ml-2"
-          >
-            info@example.com
+          <a href="mailto:info@mundialquirurgicos.com" class="text-blue-500 hover:underline ml-2">
+            info@mundialquirurgicos.com
           </a>
         </p>
-      
+        
         <!-- WhatsApp -->
         <p class="mb-2 text-lg flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            class="w-6 h-6 text-green-500 mr-2"
-            viewBox="0 0 448 512"
-          >
-            <path d="M380.9 97.1C339 55.2 283.4 32 224 32 100.3 32 0 132.3 0 256c0 45.4 12 89.8 34.7 128.2L0 480l95.5-34.7C135.8 500 180.2 512 224 512c123.7 0 224-100.3 224-256 0-59.4-23.2-115-67.1-158.9zM224 464c-39.8 0-78.8-10.6-112.4-30.8l-8.1-4.8L48 432l28.4-55.5-4.8-8.1C22.6 332.8 12 293.8 12 254 12 134.3 110.3 36 230 36c59.4 0 115 23.2 158.9 67.1 43.9 43.9 67.1 99.5 67.1 158.9 0 119.7-98.3 218-218 218zM313.6 310.8c-4.1 11.7-20.2 22.2-28.6 24.5-8.1 2.4-18.5 3.5-29.1-2.2s-37.5-17.4-71.6-43.8c-26.5-23.6-44.2-52.5-49.4-60.9s-.8-21.3 2.2-29.1c2.4-8.4 12.8-24.5 24.5-28.6 11.7-4.1 22.9-5.3 30.3-2.2 7.4 3.1 27.9 13.2 46.3 26.1 18.4 12.8 34.3 23.8 38.9 27.9 4.5 4.2 7.2 9.4 8.4 14.7 1.2 5.3.6 12.8-2.2 21.8z" />
+          <!-- Icono WhatsApp (alternativa moderna, estilo Material Outline adaptado) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500 mr-2" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.004 2C6.477 2 2 6.477 2 12.004c0 2.123.554 4.112 1.603 5.885L2 22l4.169-1.713a9.961 9.961 0 0 0 5.835 1.717h.003c5.527 0 10.004-4.477 10.004-10.004C22.008 6.477 17.531 2 12.004 2zm5.644 14.26c-.246.69-1.44 1.355-2.017 1.445-.543.084-1.214.12-3.518-.88-2.382-1.038-3.904-3.084-4.06-3.26-.156-.174-1.34-2.143-1.34-3.254 0-1.112.608-1.96 0-3.254.607-1.293 1.675-1.82 1.903-1.934.229-.114.494-.128.677.05.18.178.758.704.963.847.206.144.344.203.589.123.245-.08 1.54-.724 2.138-.907.597-.184.998-.276 1.39.277.392.553 1.385 1.389 1.664 1.67.277.281.465.626.66.94.195.314.164.548-.086.958-.23.41-1.007 1.648-1.387 2.22-.38.572-.773.577-1.115.323z"/>
           </svg>
           <strong class="font-semibold">WhatsApp:</strong>
-          <a
-            href="https://wa.me/1234567890"
-            target="_blank"
-            class="text-green-500 hover:underline ml-2"
-          >
+          <a href="https://wa.me/573168341338" target="_blank" class="text-green-500 hover:underline ml-2">
             Chatea con nosotros por WhatsApp
           </a>
         </p>
       </div>
+      
+      
       
 
     <!-- Formulario de Contacto -->
@@ -156,7 +140,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="flex justify-center space-x-6">
       <!-- Facebook -->
       <a
-        href="https://facebook.com/your-page-here"
+        href="https://www.facebook.com/mundialquirurgicos?locale=es_LA"
         target="_blank"
         class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 text-lg transition-colors duration-300"
       >
@@ -168,7 +152,7 @@ import Layout from '../layouts/Layout.astro';
   
       <!-- Instagram -->
       <a
-        href="https://instagram.com/your-profile-here"
+        href="https://www.instagram.com/mundialquirurgicos/"
         target="_blank"
         class="flex items-center space-x-2 text-pink-500 hover:text-pink-700 text-lg transition-colors duration-300"
       >
