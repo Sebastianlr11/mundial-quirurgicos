@@ -19,61 +19,76 @@ import '../styles/global.css';
 </head>
 
 <body class="bg-gray-100 font-sans flex flex-col min-h-screen">
-    <header class="bg-gradient-to-br from-blue-300 to-blue-700 shadow-lg">
+</head>
+
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+    <header class="bg-gradient-to-br from-blue-600 to-blue-800 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4">
-            <nav class="py-4" aria-label="Navegación principal">
+            <nav class="py-3" aria-label="Navegación principal">
                 <div class="flex flex-wrap justify-between items-center">
-                    <!-- Logo -->
-                    <a href="/" class="flex items-center space-x-3">
-                        <img src="/public/images/logoMundial.jpg" 
+                    <!-- Logo mejorado -->
+                    <a href="/" class="flex items-center space-x-3 group">
+                        <img src="/public/images/logoMundial.jpg"
                              alt="Logo Mundial Quirurgicos"
-                             class="h-15 w-auto transition-transform hover:scale-105"
+                             class="h-16 w-auto transition-transform duration-300 hover:scale-105"
                              loading="eager"
-                             width="130"
-                             height="48">
-                        <span class="sr-only">Inicio</span>
+                             width="150"
+                             height="60">
+                        <span class="hidden md:block text-white font-bold text-xl tracking-wide transition-colors duration-300 group-hover:text-blue-200">
+                            Mundial Quirúrgicos
+                        </span>
                     </a>
 
-                    <!-- Menú móvil -->
-                    <button class="md:hidden p-2 text-white hover:bg-blue-500 rounded-lg"
+                    <!-- Menú móvil mejorado -->
+                    <button class="md:hidden p-3 text-white hover:bg-blue-700/30 rounded-lg transition-colors duration-300"
                             aria-label="Menú móvil"
+                            aria-expanded="false"
                             data-menu-toggle>
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
                     </button>
 
-                    <!-- Menú desktop -->
+                    <!-- Menú desktop mejorado -->
                     <div class="hidden w-full md:flex md:w-auto md:items-center" id="main-menu">
-                        <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 text-sm">
+                        <ul class="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-base font-medium">
                             <li>
                                 <a href="/" 
-                                   class="block py-2 px-4 text-white hover:bg-blue-500 rounded transition-colors duration-300"
+                                   class="block py-2 px-4 text-white hover:bg-blue-700/30 rounded-lg transition-all duration-300 relative
+                                          before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-0.5 before:bg-white before:transition-all before:duration-300
+                                          hover:before:w-4/5 hover:before:left-[10%]"
                                    aria-current="page">
                                     Inicio
                                 </a>
                             </li>
                             <li>
                                 <a href="/productos" 
-                                   class="block py-2 px-4 text-white hover:bg-blue-500 rounded transition-colors duration-300">
+                                   class="block py-2 px-4 text-white hover:bg-blue-700/30 rounded-lg transition-all duration-300 relative
+                                          before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-0.5 before:bg-white before:transition-all before:duration-300
+                                          hover:before:w-4/5 hover:before:left-[10%]">
                                     Productos
                                 </a>
                             </li>
                             <li>
                                 <a href="/servicios" 
-                                   class="block py-2 px-4 text-white hover:bg-blue-500 rounded transition-colors duration-300">
+                                   class="block py-2 px-4 text-white hover:bg-blue-700/30 rounded-lg transition-all duration-300 relative
+                                          before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-0.5 before:bg-white before:transition-all before:duration-300
+                                          hover:before:w-4/5 hover:before:left-[10%]">
                                     Servicios
                                 </a>
                             </li>
                             <li>
                                 <a href="/nosotros" 
-                                   class="block py-2 px-4 text-white hover:bg-blue-500 rounded transition-colors duration-300">
-                                    Sobre Nosotros
+                                   class="block py-2 px-4 text-white hover:bg-blue-700/30 rounded-lg transition-all duration-300 relative
+                                          before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-0.5 before:bg-white before:transition-all before:duration-300
+                                          hover:before:w-4/5 hover:before:left-[10%]">
+                                    Nosotros
                                 </a>
                             </li>
                             <li>
                                 <a href="/contacto" 
-                                   class="block py-2 px-4 text-white bg-blue-700 md:bg-transparent md:hover:bg-blue-500 rounded transition-colors duration-300">
+                                   class="block py-2 px-6 ml-2 text-white bg-blue-700 hover:bg-blue-600 rounded-full transition-all duration-300
+                                          shadow-md hover:shadow-lg hover:scale-105">
                                     Contacto
                                 </a>
                             </li>
