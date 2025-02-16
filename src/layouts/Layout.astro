@@ -100,7 +100,7 @@ import '../styles/global.css';
     </header>
 
     <main class="flex-grow container mx-auto px-4 py-8">
-        <div class="body-overlay"></div>
+        <div class="body-overlay hidden fixed top-0 left-0 w-full h-full bg-black/50 z-40 transition-opacity duration-300 md:hidden"></div>  {/* Añade este div */}
         <slot />
     </main>
 
