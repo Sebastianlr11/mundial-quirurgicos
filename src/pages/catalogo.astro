@@ -1,0 +1,94 @@
+---
+// src/pages/catalogo.astro
+import Layout from '../layouts/Layout.astro';
+
+const productos = [
+  {
+    nombre: 'Bata Médica Clásica',
+    descripcion: 'Bata médica de algodón 100% para máxima comodidad.',
+    imagen: '/images/dotaciones.jpg',
+    precio: 25.99,
+    categoria: 'Batas',
+  },
+  {
+    nombre: 'Pantalón Médico Resistente',
+    descripcion: 'Pantalón médico de poliéster y algodón, resistente y duradero.',
+    imagen: '/images/dotaciones1.jpg',
+    precio: 19.99,
+    categoria: 'Pantalones',
+  },
+  {
+    nombre: 'Pijama Quirúrgico Confort',
+    descripcion: 'Pijama quirúrgico de tejido suave y transpirable para largas jornadas.',
+    imagen: '/images/dotaciones2.jpg',
+    precio: 35.50,
+    categoria: 'Pijamas',
+  },
+  {
+    nombre: 'Gorro Quirúrgico Estéril',
+    descripcion: 'Gorro quirúrgico desechable para máxima higiene.',
+    imagen: '/images/dotaciones3.jpg',
+    precio: 5.50,
+    categoria: 'Accesorios',
+  },
+  {
+    nombre: 'Mascarilla Facial Protectora',
+    descripcion: 'Mascarilla facial de alta filtración para protección respiratoria.',
+    imagen: '/images/elementos1.jpg',
+    precio: 9.99,
+    categoria: 'Accesorios',
+  },
+];
+const categorias = [...new Set(productos.map(producto => producto.categoria))];
+---
+
+<Layout title="Catálogo de Productos">
+  <main class="container mx-auto mt-10 p-4">
+    <h1 class="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 mb-10">
+      Catálogo de Productos
+    </h1>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <button class="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-teal-400 text-white shadow-lg hover:shadow-xl transition transform hover:scale-105">
+        Todas
+      </button>
+      {categorias.map((categoria) => (
+        <button class="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-teal-400 text-white shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          {categoria}
+        </button>
+      ))}
+    </div>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      {productos.map((producto) => (
+        <div class="relative group overflow-hidden rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-105">
+         <div class="relative">
+              <img
+                src={producto.imagen}
+                alt={producto.nombre}
+               class="object-cover w-full h-64 transition-transform duration-700 group-hover:scale-110"
+              />
+             <div class="absolute inset-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+            </div>
+
+          <div class="p-6 bg-white">
+            <h2 class="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-blue-600">
+              {producto.nombre}
+            </h2>
+            <p class="text-gray-600 mb-4 h-20 overflow-hidden">
+              {producto.descripcion}
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-semibold text-blue-500">
+                ${producto.precio.toFixed(2)}
+              </span>
+              <button class="px-4 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300 transform hover:scale-110">
+                Ver más
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </section>
+  </main>
+</Layout>
